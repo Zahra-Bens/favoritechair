@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #1f4e5f;
+        font-size: 42px;
+        border: 1px solid #aacfd0;
+        border-radius: 5px;
+        padding: 5% 5% 5%;
+        height: 1.5;
+        transition: all 200ms ease-in-out;
+      }
+      h1:hover {
+        background: #aacfd0;
+      }
+      h2 {
+        text-align: center;
+        color: #1f4e5f;
+        font-size: 18px;
+        border: 1px solid#aacfd0;
+        border-radius: 5px;
+        padding: 5% 5% 5%;
+        height: 1.5;
+      }
+      h2:hover {
+        background: #aacfd0;
+      }
+      h3 {
+        font-weight: lighter;
+        text-align: center;
+        font-size: small;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 13.5 px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 10px;
+      }
+      .source {
+        color: #1f4e5f;
+      }
+      .info {
+        text-align: center;
+      }
+      .demo-project {
+        box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+        background-image: linear-gradient(
+          -180deg,
+          rgba(207, 252, 249, 0.5) 0%,
+          rgba(10, 13, 14, 0.5) 100%
+        );
+        border-radius: 10px;
+        color: #fff;
+        width: 80%;
+        padding: 30px;
+        margin: 30px auto;
+        font-family: Proxima Nova, sans-serif;
+      }
+      .learn-more {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #1f4e5f;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        background-color: #1f4e5f;
+        color: white;
+        font-size: 18px;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 6px;
+        font-family: proxima nova;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+      button:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+      .myinfo {
+        color: #1f4e5f;
+        text-decoration: none;
+        font-weight: bold;
+        padding-bottom: 20px;
+      }
+      .myinfo:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-project">
+      <h1>I lღve design</h1>
+      <h2>My favorite piece is Z Chair designed by Zaha Hadid !</h2>
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/028/300/original/zchair01.jpg?1646084058 "
+        ,
+        alt=" design"
+      />
+      <h3>
+        "Z chair" by Zaha Hadid for sawaya & moroni
+        <br />
+        Image © <span class="source"> Designboom</span>
+      </h3>
+      <p>
+        the design is a simple three-dimensional gesture that zigzags in space
+        as part of the continued discourse between form and function, elegance
+        and utility, differentiation and continuity. geometric abstractions
+        inform the design's linear loop, articulated along its path in a
+        language that alternates thin wire streams and large surfaces to provide
+        both ergonomic affordances and inherent stability to the overall shape.
+        the subtle play of contrasting angular corners and wide, smooth curves
+        are a result of the calligraphic gestures of Hadid's two-dimensional
+        works, a three-dimensional presentation of a controlled brush stroke on
+        a canvas, the synthesis of an idea: the sketch.
+      </p>
+      <a
+        href="https://www.designboom.com/design/zaha-hadid-z-chair-for-sawaya-moroni/"
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more on designboom
+      </a>
+
+      <button class="check-button">Check out my design</button>
+      <br />
+
+      <div class="info">
+        This website is coded by
+        <a
+          class="myinfo"
+          href="https://www.instagram.com/ms.zahra.b/"
+          target="_blank"
+        >
+          <em>Zahra Bensaidane.</em>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      function interaction() {
+        let firstName = prompt("what is your name ?");
+        let contactInfo = prompt("What is your email ?");
+        let design = prompt(
+          "are a student in design field or equivalent (answer Yes or No)?"
+        );
+        design = design.toLowerCase().trim();
+
+        if (design === "yes") {
+          alert("Hi, " + firstName + " we'll be in touch soon !");
+        } else {
+          alert(
+            "Hi, " +
+              firstName +
+              " follow me on instagram to see the latest school projects in design !"
+          );
+        }
+      }
+      let checkButton = document.querySelector(".check-button");
+      checkButton.addEventListener("click", interaction);
+    </script>
+  </body>
+</html>
